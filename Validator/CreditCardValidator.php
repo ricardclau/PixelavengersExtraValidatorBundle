@@ -1,5 +1,5 @@
 <?php
-namespace Pixelavengers\Bundle\AdminGeneratorBundle\Validator;
+namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;

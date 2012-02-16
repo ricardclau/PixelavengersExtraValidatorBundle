@@ -1,7 +1,7 @@
-PixelavengersExtraValidationBundle
+PixelavengersExtraValidatorBundle
 =================================
 
-Welcome to Pixelavengers Extra Validation Bundle.
+Welcome to Pixelavengers Extra Validator Bundle.
 This bundle provides some useful validators for common website cases.
 
 Installation
@@ -9,13 +9,13 @@ Installation
 
 ### Download via git submodule
 
-    git submodule add git://github.com/ricardclau/PixelavengersExtraValidationBundle.git vendor/bundles/Pixelavengers/Bundle/ExtraValidationBundle
+    git submodule add git://github.com/ricardclau/PixelavengersExtraValidatorBundle.git vendor/bundles/Pixelavengers/Bundle/ExtraValidatorBundle
 
 ### Download by editing deps file
 
-    [PixelavengersExtraValidationBundle]
-        git=http://github.com/ricardclau/PixelavengersExtraValidationBundle.git
-        target=/bundles/Pixelavengers/Bundle/ExtraValidationBundle
+    [PixelavengersExtraValidatorBundle]
+        git=http://github.com/ricardclau/PixelavengersExtraValidatorBundle.git
+        target=/bundles/Pixelavengers/Bundle/ExtraValidatorBundle
         version=origin/master
 
 ### Modify autoload.php and instantiate bundle in AppKernel.php
@@ -31,6 +31,6 @@ Installation
     {
         $bundles = array(
             // ...
-            new Pixelavengers\Bundle\ExtraValidationBundle\PixelavengersExtraValidationBundle(),
+            new Pixelavengers\Bundle\ExtraValidatorBundle\PixelavengersExtraValidatorBundle(),
         );
     }

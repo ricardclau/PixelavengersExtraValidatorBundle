@@ -1,5 +1,5 @@
 <?php
-namespace Pixelavengers\Bundle\AdminGeneratorBundle\Validator;
+namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator;
 
 /**
  * @Annotation
