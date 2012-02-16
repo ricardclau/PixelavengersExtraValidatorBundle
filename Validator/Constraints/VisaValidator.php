@@ -1,5 +1,5 @@
 <?php
-namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator;
+namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator\Constraints;
 
 class VisaValidator extends CreditCardValidator
 {

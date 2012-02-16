@@ -1,0 +1,21 @@
+{
+    "name": "pixelavengers/extra-validator-bundle",
+    "description": "This bundle provides some useful extra validators",
+    "keywords": ["validators"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricard Clau",
+            "email": "ricard.clau@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "2.0.*",
+        "doctrine/common": ">=2.0"
+    },
+    "autoload": {
+        "psr-0": { "Pixelavengers\\Bundle\\ExtraValidatorBundle": "" }
+    },
+    "target-dir": "Pixelavengers/Bundle/ExtraValidatorBundle"
+}
