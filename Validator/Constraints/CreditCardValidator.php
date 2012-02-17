@@ -5,8 +5,14 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
-abstract class CreditCardValidator extends ConstraintValidator
+class CreditCardValidator extends ConstraintValidator
 {
+    /**
+     * @see http://regexlib.com/REDetails.aspx?regexp_id=1835
+     * Generic Credit Card Validator
+     */
+    const PATTERN = '/^[3|4|5|6]([0-9]{15}$|[0-9]{12}$|[0-9]{13}$|[0-9]{14}$)/';
+
     /**
      * {@inheritDoc}
      */
