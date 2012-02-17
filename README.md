@@ -4,6 +4,8 @@ PixelavengersExtraValidatorBundle
 Welcome to Pixelavengers Extra Validator Bundle.
 This bundle provides some useful validators for common website cases.
 
+[![Build Status](https://secure.travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle.png?branch=master)](http://travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle)
+
 Installation
 ---------------
 
