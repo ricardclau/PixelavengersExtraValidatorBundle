@@ -53,7 +53,7 @@ class VisaValidatorTest extends \PHPUnit_Framework_TestCase
             /**
              * Older Visas had this short format
              */
-            array('4222222222222')
+            array('4222222222222'),
         );
     }
 
