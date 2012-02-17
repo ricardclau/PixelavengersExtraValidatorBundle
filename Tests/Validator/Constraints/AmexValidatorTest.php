@@ -64,7 +64,11 @@ class AmexValidatorTest extends \PHPUnit_Framework_TestCase
     public function getInvalidAmexs()
     {
         return array(
-            array('4548813149400013'),
+            array('4111111111111111'),
+            array('4012888888881881'),
+            array('4222222222222'),
+            array('5555555555554444'),
+            array('5105105105105100'),
         );
     }
 }

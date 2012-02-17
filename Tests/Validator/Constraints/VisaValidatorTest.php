@@ -66,6 +66,10 @@ class VisaValidatorTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array('4548813149400013'),
+            array('371449635398431'),
+            array('378734493671000'),
+            array('5555555555554444'),
+            array('5105105105105100'),
         );
     }
 }

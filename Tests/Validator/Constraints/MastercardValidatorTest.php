@@ -63,7 +63,11 @@ class MastercardValidatorTest extends \PHPUnit_Framework_TestCase
     public function getInvalidMastercards()
     {
         return array(
-            array('4548813149400013'),
+            array('4548812049400004'),
+            array('4111111111111111'),
+            array('4222222222222'),
+            array('371449635398431'),
+            array('378734493671000'),
         );
     }
 }
