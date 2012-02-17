@@ -2,16 +2,12 @@
 
 $vendorDir = __DIR__ . '/../vendor';
 
-if (!@include $vendorDir . '/.composer/autoload.php') {
+if (!@include($vendorDir . '/.composer/autoload.php')) {
     die("You must set up the project dependencies, run the following commands:
 wget http://getcomposer.org/composer.phar
 php composer.phar install
 ");
 }
-
-require_once $vendorDir . '/symfony/symfony/src/Symfony/Component/ClassLoader/UniversalClassLoader.php';
-
-use Symfony\Component\ClassLoader\UniversalClassLoader;
 
 spl_autoload_register(function($class) {
     if (0 === (strpos($class, 'Pixelavengers\\Bundle\\ExtraValidatorBundle\\'))) {
@@ -24,10 +20,3 @@ spl_autoload_register(function($class) {
         return true;
     }
 });
-
-$loader = new UniversalClassLoader();
-$loader->registerNamespaces(array(
-    'Symfony' => array($vendorDir.'/symfony/src', $vendorDir.'/bundles'),
-    'Doctrine\\Common' => $vendorDir.'/doctrine-common/lib',
-));
-$loader->register();

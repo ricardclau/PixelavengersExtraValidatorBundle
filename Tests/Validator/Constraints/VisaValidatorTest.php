@@ -50,6 +50,9 @@ class VisaValidatorTest extends \PHPUnit_Framework_TestCase
             array('4548812049400004'),
             array('4111111111111111'),
             array('4012888888881881'),
+            /**
+             * Older Visas had this short format
+             */
             array('4222222222222')
         );
     }
