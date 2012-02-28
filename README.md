@@ -5,6 +5,7 @@ Welcome to Pixelavengers Extra Validator Bundle.
 This bundle provides some useful validators for common website cases.
 
 Current validators:
+
 * **CreditCard**, both generic and specific validators for: **Visa**, **Mastercard**, **American Express**, **Discover**, **JCB**, **Diners**
 * **CVV**
 
