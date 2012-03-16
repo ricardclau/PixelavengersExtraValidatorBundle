@@ -16,6 +16,7 @@ Spain
 -----
 
 * **ESSeguridadSocial** identifiers for public health system
+* **ESPhoneNumber**, both mobile and fixed
 
 [![Build Status](https://secure.travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle.png?branch=master)](http://travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle)
 
