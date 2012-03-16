@@ -58,11 +58,11 @@ class SeguridadSocialValidator extends ConstraintValidator
         $checksum = (int) substr($value, -2);
 
         if ($number < 10000000) {
-            $tmp = $stateId * 10000000 + $number;
+            $tmp = (string) ($stateId * 10000000 + $number);
         } else {
-            $tmp = (int) ((string) $stateId . (string) $number);
+            $tmp = ((string) $stateId . (string) $number);
         }
 
-        return ($checksum === ($tmp % 97));
+        return ($checksum === (int) bcmod($tmp, '97'));
     }
 }
