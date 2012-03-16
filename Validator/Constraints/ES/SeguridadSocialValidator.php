@@ -1,11 +1,11 @@
 <?php
-namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator\Constraints;
+namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator\Constraints\ES;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
-class ESSeguridadSocialValidator extends ConstraintValidator
+class SeguridadSocialValidator extends ConstraintValidator
 {
     /**
      * This number is 11 digit length for companies and 12 digit length for employees

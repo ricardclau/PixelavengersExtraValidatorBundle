@@ -1,12 +1,12 @@
 <?php
-namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator\Constraints;
+namespace Pixelavengers\Bundle\ExtraValidatorBundle\Validator\Constraints\ES;
 
 use Symfony\Component\Validator\Constraint;
 
 /**
  * @Annotation
  */
-class ESSeguridadSocial extends Constraint
+class SeguridadSocial extends Constraint
 {
     public $message = 'This value is not a valid ES Seguridad Social number';
 }
