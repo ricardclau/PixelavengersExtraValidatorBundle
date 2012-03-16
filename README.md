@@ -6,8 +6,16 @@ This bundle provides some useful validators for common website cases.
 
 Current validators:
 
+WorldWide
+---------
+
 * **CreditCard**, both generic and specific validators for: **Visa**, **Mastercard**, **American Express**, **Discover**, **JCB**, **Diners**
 * **CVV**
+
+Spain
+-----
+
+* **ESSeguridadSocial** identifiers for public health system
 
 [![Build Status](https://secure.travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle.png?branch=master)](http://travis-ci.org/ricardclau/PixelavengersExtraValidatorBundle)
 
