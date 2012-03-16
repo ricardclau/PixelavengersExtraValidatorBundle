@@ -7,7 +7,10 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 class ESSeguridadSocialValidator extends ConstraintValidator
 {
-    const PATTERN = '/^[0-9]{3,4}$/';
+    /**
+     * This number is 11 digit length for companies and 12 digit length for employees
+     */
+    const PATTERN = '/^[0-9]{11,12}$/';
 
     /**
      * {@inheritDoc}
@@ -30,12 +33,36 @@ class ESSeguridadSocialValidator extends ConstraintValidator
             return false;
         }
 
-        if (!$this->validateSeguridadSocialNumber($value)) {
-            $this->setMessage($constraint->invalidChecksumMessage);
+        if (!$this->validateESSeguridadSocialNumber($value)) {
+            $this->setMessage($constraint->message);
 
             return false;
         }
 
         return true;
+    }
+
+    /**
+     * This number is 12 digit length with the following format aabbbbbbbbcc
+     * where aa means the state
+     *       bbbbbbbb is the number
+     *       cc is the checksum calculated in quite a strange way
+     *
+     * @param string $value
+     * @return bool
+     */
+    private function validateESSeguridadSocialNumber($value)
+    {
+        $stateId = (int) substr($value, 0, 2);
+        $number = (int) substr($value, 2, -2);
+        $checksum = (int) substr($value, -2);
+
+        if ($number < 10000000) {
+            $tmp = $stateId * 10000000 + $number;
+        } else {
+            $tmp = (int) ((string) $stateId . (string) $number);
+        }
+
+        return ($checksum === ($tmp % 97));
     }
 }
