@@ -53,16 +53,16 @@ class SeguridadSocialValidator extends ConstraintValidator
      */
     private function validateESSeguridadSocialNumber($value)
     {
-        $stateId = (int) substr($value, 0, 2);
-        $number = (int) substr($value, 2, -2);
-        $checksum = (int) substr($value, -2);
+        $stateId = substr($value, 0, 2);
+        $number = substr($value, 2, -2);
+        $checksum = substr($value, -2);
 
-        if ($number < 10000000) {
-            $tmp = (string) ($stateId * 10000000 + $number);
+        if ($number < '10000000') {
+            $tmp = bcadd(bcmul($stateId, '10000000'), $number);
         } else {
-            $tmp = ((string) $stateId . (string) $number);
+            $tmp = $stateId . $number;
         }
 
-        return ($checksum === (int) bcmod($tmp, '97'));
+        return ($checksum === bcmod($tmp, '97'));
     }
 }
